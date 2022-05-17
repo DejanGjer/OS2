@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv){
 	printf("Sadrzaj trenutnog direktorijuma\n");
-	int result = execl("/bin/ls", "-gG",  NULL);
+	int result = execl("/bin/ls", "ls", "-gG",  NULL);
 	if(result == -1){
 		printf("Error in child process: %\ns", strerror(errno));
 	}
